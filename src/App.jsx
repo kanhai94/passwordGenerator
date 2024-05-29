@@ -1,6 +1,10 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import "./App.css";
 
+
+// import Imgage from '../public';
+
+
 function App() {
   // State variables to manage password generation options and the generated password
   const [length, setLength] = useState(8);
@@ -13,7 +17,7 @@ function App() {
 
   // Function to generate a random password based on current options
   const passwordGenerator = useCallback(() => {
-    let charset = "abcdefghijklmnopqrstuvwxyz";
+    let charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if (numberAllowed) charset += "0123456789";
     if (charAllowed) charset += "+-(){}*&^%$#@!";
     let password = "";
